@@ -619,7 +619,150 @@ In a monolithic world everything revolved around: Inter process communication.
 - Amazon EC2 
    - Partially managed 
 
+
+### Networking on AWS 
+
+- Connectivity/Hybrid networking 
+   - VPC Peering
+   - Transit gateway 
+   - VPNs 
+   - Direct connect 
+   - VPC End Points 
+
+VPC Endpoint - helps you ensure that the traffic goes through the amazon backbone network, instead of going through the internet - making it more secue
+
+To convert public endpoints and make them private. 
+
+- Endpoints there are two different categories 
+   - Gateway endpoints
+      - S3 and DynamoDB
+      - Requires route table modifications
+   - Interface endpoints
+      - Almost all other 
+
+
+VPC Peering: 
+
+When you wnat two VPCs to talk to each other you need a peering object. 
+
+You should try an limit the amount of peering objects that you create
+
+For each vpc you need to connect the formulat is m(m-1)/2 
+
+
+You can use transit gateway as a single hub for all things that are
+
+AWS Site-to-Site VPN 
+
+I fyou have on prem servesr and you need to get
+
+you can use a combination of customer gateway device and a virtual private gateway. 
+
+Problem is you'd be held back by  public internet 
+
+AWS Direct Connect can be used to migitate the speed issues. 
+
+You'd often need to go to an amazon partner to manage this. 
+
+### Serverless
+
+I need to finsih this at another time.
+
+All about Event Driven Architecture 
+API Gateway 
+API Developers and API Consumers 
+SQS verus SNS
+
+### Edge Services 
+
+Is there a DNS solution that is scalable and highly available.
+
+A lot of what we talk about is how to reduce latency. 
+
+DNS: When you hear this think Amazon Route 53. 
+
+Simple routing
+
+Geographic routing: Based on where you are you will be directed to certain regions 
+
+Weighted Routining:
  
+Deployoment strategies: When you want to run two environments in parallel. For instance Blue-green deployment strategy.
+
+Edge locationsn providde cached data
+
+cache hit: when you received the data from the edge location and do not have to go to the source
+
+WAF: works on web ACL list you are a blocking at the subnet level certain IP addresses. 
+
+
+https://owasp.org/www-project-top-ten/
+
+
+AWS WAF us used with cloudfront, application load balancer and api gateway as these are the front door to your vpc. 
+
+
+### Distaster planning 
+
+Disasters can happen at any level 
+
+you have ahave a few instances failing - you have AZ's failing and you can have regions failing. 
+
+There are failures at the compute, storage or database 
+
+When you are creating strategies you need to consider all of these levels
+
+A good metric is RPO (Recovery Point Objective) and RTO (Recovery Time Objective)
+
+- One way to work with this is to duplicate the storage. 
+
+When it comes to compute AMI's are impotant using auto scaling groups etc
+
+Database back up and replicas  
+
+cloud formation you can quickly regenerate the infastructure 
+
+Do not be the person that does not use auomation. whether it is cloud formation etc. AS long as you using/leveraging one of them. 
+
+
+AWS Backup 
+
+#### Recovery Strategy 
+
+
+## Certification 
+
+It was mentioned that there are some really good resources in place by AWS
+
+For instance ramp up
+
+and skill buidlder 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
