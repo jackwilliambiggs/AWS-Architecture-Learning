@@ -1,2 +1,3 @@
-# AWS-Architecture-Course
-A Repository to store learning on the AWS course 
+# AWS-Architecture-Learning
+
+This repository will serve as a coordination point for learning on AWS Architecture.
